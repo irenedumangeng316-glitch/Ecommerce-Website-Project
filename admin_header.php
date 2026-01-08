@@ -44,8 +44,8 @@ if (isset($_POST['logout'])) {
 
             <!-- Icons -->
             <div class="icons">
-                <i class="bi bi-person" id="user-btn"></i>
-                <i class="bi bi-list" id="menu-btn"></i>
+                <i class="fa-solid fa-user" id="user-btn"></i>
+                <i class="fa-solid fa-list" id="menu-btn"></i>
             </div>
 
             <!-- User Box -->
