@@ -43,7 +43,7 @@
             <div class="box">
                 <div class="title">
                     <span>ABOUT OUR STORE</span>
-                    <h1>Each Aura Tumbler is more than just stainless steel;</h1>
+                    <h1>Each Tumbler is more than just stainless steel;</h1>
                 </div>
                 <p>In a world filled with single-use plastic and fleeting trends, 
                     a simple idea sparked our journey: what if every sip could carry a story, not just a drink?
@@ -192,5 +192,6 @@
     <?php include 'footer.php'; ?>
     <script type="text/javascript" src="script.js"></script>
 </body>
+
 
 </html>
