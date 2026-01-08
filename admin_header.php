@@ -30,7 +30,7 @@ if (isset($_POST['logout'])) {
         <div class="flex">
             <!-- Logo -->
             <a href="admin_panel.php" class="logo">
-                <img src="img/logo.png" alt="Logo">
+                <img src="chalicet logo.png" alt="Logo">
             </a>
 
             <!-- Navigation -->
