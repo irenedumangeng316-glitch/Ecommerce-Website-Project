@@ -1,6 +1,8 @@
 <?php
 @include 'connection.php';
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 // Ensure user is logged in
 if (!isset($_SESSION['user_id'])) {
@@ -16,21 +18,15 @@ if (isset($_POST['logout'])) {
     exit();
 }
 
-// Wishlist count
-$stmt = $conn->prepare("SELECT COUNT(*) AS total FROM wishlist WHERE user_id=?");
-$stmt->bind_param("i", $user_id);
-$stmt->execute();
-$result = $stmt->get_result();
-$wishlist_num_rows = $result->fetch_assoc()['total'] ?? 0;
-$stmt->close();
+// Wishlist count (PDO)
+$stmt = $conn->prepare("SELECT COUNT(*) FROM wishlist WHERE user_id = ?");
+$stmt->execute([$user_id]);
+$wishlist_num_rows = (int) $stmt->fetchColumn();
 
-// Cart count
-$stmt = $conn->prepare("SELECT COUNT(*) AS total FROM cart WHERE user_id=?");
-$stmt->bind_param("i", $user_id);
-$stmt->execute();
-$result = $stmt->get_result();
-$cart_num_rows = $result->fetch_assoc()['total'] ?? 0;
-$stmt->close();
+// Cart count (PDO)
+$stmt = $conn->prepare("SELECT COUNT(*) FROM cart WHERE user_id = ?");
+$stmt->execute([$user_id]);
+$cart_num_rows = (int) $stmt->fetchColumn();
 ?>
 <!DOCTYPE html>
 <html lang="en">
