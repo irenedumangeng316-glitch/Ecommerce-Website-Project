@@ -19,9 +19,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!----------------bootstrap icon link------------------->
-    <link rel="stylesheet" href="https://cdn.jsdeliver.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://kit.fontawesome.com/f59eee459e.js"></script>
     <title>Chalicet - Home Page</title>
 </head>
 
